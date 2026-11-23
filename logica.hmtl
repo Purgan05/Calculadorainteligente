@@ -1,1 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Inteligente - ElectroLab</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <main class="contenedor">
+    <h1>ELECTROLAB</h1>
+    <p class="subtitulo">Calculadora Inteligente</p>
+
+    <section class="tarjeta">
+      <h2>1. Ley de Ohm</h2>
+      <label>¿Qué quieres calcular?
+        <select id="ohm-tipo">
+          <option value="voltaje">Voltaje (V = I × R)</option>
+          <option value="corriente">Corriente (I = V / R)</option>
+          <option value="resistencia">Resistencia (R = V / I)</option>
+        </select>
+      </label>
+      <label>Valor 1: <input type="number" id="ohm-valor1" step="any" placeholder="Ej. 2.5"></label>
+      <label>Valor 2: <input type="number" id="ohm-valor2" step="any" placeholder="Ej. 100"></label>
+      <p class="ayuda" id="ohm-ayuda">Valor 1 = Corriente (A) · Valor 2 = Resistencia (ohm)</p>
+      <button onclick="calcularOhm()">Calcular Ohm</button>
+    </section>
+
+    <section class="tarjeta">
+      <h2>2. Potencia eléctrica</h2>
+      <label>Voltaje (V): <input type="number" id="pot-voltaje" step="any"></label>
+      <label>Corriente (A): <input type="number" id="pot-corriente" step="any"></label>
+      <button onclick="calcularPotencia()">Calcular Potencia (P = V × I)</button>
+    </section>
+
+    <section class="tarjeta">
+      <h2>3. Análisis de señales</h2>
+      <label>Tipo:
+        <select id="senal-tipo">
+          <option value="frecuencia">Frecuencia (f = 1 / T)</option>
+          <option value="periodo">Periodo (T = 1 / f)</option>
+        </select>
+      </label>
+      <label>Valor: <input type="number" id="senal-valor" step="any"></label>
+      <button onclick="calcularSenal()">Calcular Señal</button>
+    </section>
+
+    <section class="tarjeta">
+      <h2>4. Conversión de unidades</h2>
+      <label>Conversión:
+        <select id="conv-tipo">
+          <option value="v-mv">Voltios a milivoltios</option>
+          <option value="a-ma">Amperios a miliamperios</option>
+          <option value="khz-hz">Kilohertz a hertz</option>
+          <option value="us-s">Microsegundos a segundos</option>
+        </select>
+      </label>
+      <label>Valor: <input type="number" id="conv-valor" step="any"></label>
+      <button onclick="calcularConversion()">Convertir</button>
+    </section>
+
+    <section class="tarjeta resultado">
+      <h2>Resultado</h2>
+      <p id="resultado">Sin cálculos todavía.</p>
+    </section>
+
+    <section class="tarjeta">
+      <h2>5. Historial de la sesión</h2>
+      <ul id="historial"></ul>
+      <p id="total">Total de cálculos: 0</p>
+    </section>
+  </main>
+  <script src="logica.js"></script>
+</body>
+</html>
 
