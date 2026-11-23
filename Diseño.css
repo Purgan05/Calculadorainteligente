@@ -1,1 +1,49 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+.contenedor {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+}
+h1 { text-align: center; margin: 8px 0 0; letter-spacing: 2px; }
+.subtitulo { text-align: center; color: #94a3b8; margin: 4px 0 24px; }
+.tarjeta {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+.tarjeta h2 { margin-top: 0; font-size: 18px; }
+label { display: block; margin: 10px 0; font-size: 14px; }
+input, select {
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #475569;
+  background: #0f172a;
+  color: #fff;
+}
+button {
+  width: 100%;
+  padding: 11px;
+  border: 0;
+  border-radius: 8px;
+  background: #38bdf8;
+  color: #082f49;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:hover { background: #7dd3fc; }
+.ayuda { color: #94a3b8; font-size: 13px; }
+.resultado { border-color: #38bdf8; }
+#resultado { font-size: 17px; font-weight: bold; white-space: pre-line; }
+#historial { padding-left: 18px; }
+#historial li { margin: 6px 0; }
 
